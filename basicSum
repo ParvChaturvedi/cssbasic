@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0081)file:///C:/Program%20Files/Sublime%20Text%203/JS/Parv%20Chaturvedi%20S.M.H.S.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>
+		Calculate total &amp; percentage.
+	</title>
+	<style type="text/css">
+		body{
+	margin: 0px;
+	padding:0px;
+	font-family: sans-sarif;
+	background: #34495e;
+}   
+.design{
+   color: white;
+}
+.main{
+	width: 500px;
+	padding: 20px;
+	position: relative;
+	top: 330px;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: #191919;
+    text-align: left;
+    overflow-wrap: all;
+    color: white;
+    display: block;
+}
+.main h1{
+	color:white;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.main input[type="number"]{
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border:2px solid #3498db;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: .5s;
+	position: relative;
+	left:30px;
+}
+.main input [type="number"]{
+	width: 280px;
+	border-color: #2ecc71;
+}
+.main button{
+	border:0;
+	background: none;
+	display: inline;
+	margin: 20px auto;
+	text-align: center;
+	border:2px solid #2ecc71;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	transition: .5s;
+	position: relative;
+	left: 60px;
+}
+.main button:hover{
+	background: #2ecc71;
+}
+.main [type="number"]:hover{
+ width: 250px;
+}
+label{
+	position: relative;
+	top: 18px;
+	float: left;
+}
+h3{
+	position: relative;
+	top: -20px;
+	left: 100px;
+}
+#id2{
+	position: relative;
+    left: 35px;
+}
+#id3{
+    position: relative;
+    left: 30px;
+}
+#id4{
+	position: relative;
+	left: 38px;
+}
+#id5{
+	position: relative;
+	left: 17px;
+}
+#id6{
+	position: relative;
+	left: 30px;
+}
+#id7{
+	position: relative;
+	left: 20px;
+}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+
+<h3></h3>
+ <label>BME</label> <input type="number" id="id1" accesskey="enter">
+
+<label>ECE </label>   <input type="number" id="id2">
+       
+ <label>Maths</label>  <input type="number" id="id3">
+  
+<label>ES</label> <input type="number" id="id4">
+
+ <label>Chemistry</label>    <input type="number" id="id5">
+
+<label>BEE</label> <input type="number" id="id6">
+
+<label>Physics</label> <input type="number" id="id7">
+
+<button onclick="calculate()">
+	Percentage 
+</button>
+<button onclick="total()">
+	Total
+</button>
+<button onclick="myButton()">
+	Reset
+</button>
+	<div id="div1">
+	</div>
+	<div id="div2">
+	</div>
+</div>
+	<script>
+        function calculate(){
+        	var a = parseInt(document.getElementById("id1").value);
+        	var b = parseInt(document.getElementById("id2").value);
+        	var c = parseInt(document.getElementById("id3").value);
+        	var d = parseInt(document.getElementById("id4").value);
+        	var e = parseInt(document.getElementById("id5").value);
+        	var f = parseInt(document.getElementById("id6").value);
+        	var g = parseInt(document.getElementById("id7").value);
+            var obt = a+b+c+d+e+f+g;   
+            var per = (obt/700)*100;
+            document.getElementById("div1").innerHTML="Your Percentage is "+per;         
+        }
+        function total(){
+        	var a1 = parseInt(document.getElementById("id1").value);
+        	var b1 = parseInt(document.getElementById("id2").value);
+        	var c1 = parseInt(document.getElementById("id3").value);
+        	var d1 = parseInt(document.getElementById("id4").value);
+        	var e1 = parseInt(document.getElementById("id5").value);
+        	var f1 = parseInt(document.getElementById("id6").value);
+        	var g1 = parseInt(document.getElementById("id7").value);
+            var obt1 = a1+b1+c1+d1+e1+f1+g1;   
+            document.getElementById("div2").innerHTML="Your total is "+obt1; 
+        }
+        function myButton(){
+        	location.reload();
+        }
+        function move(){
+          if (e.keycode === 13) {
+           actiom(e.keycode===19)
+          }   
+        }
+	</script>
+
+</body></html>
